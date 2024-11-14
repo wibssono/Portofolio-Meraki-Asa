@@ -18,6 +18,7 @@ st.set_page_config(
 # -------------------------------------- Read dataset and json file ------------------------------
 # Define the data directory
 data_dir = os.path.join(os.path.dirname(__file__), 'data')
+asset_dir = os.path.join(os.path.dirname(__file__), 'asset')
 # Read the CSV file
 df = pd.read_csv(os.path.join(data_dir, 'nyc-rolling-sales_cleaned.csv'))
 # Read the GeoJSON file
@@ -28,7 +29,8 @@ with open(os.path.join(data_dir, 'Borough Boundaries.geojson')) as f:
 with st.sidebar:
     # Logo dan BG
     st.write("Hello (〜￣▽￣)〜")
-    st.image("asset\data-science.png")
+    # st.image(os.path.join(asset_dir, 'data-science.png'))
+    st.image('asset\data-science.png')
     st.write("""
              Saya Prayogi Dwi Wibisono mempersembahkan Dashboard analisis data dari penjualan properti di 
              kota New York.
