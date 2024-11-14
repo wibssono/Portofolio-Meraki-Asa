@@ -29,8 +29,8 @@ with open(os.path.join(data_dir, 'Borough Boundaries.geojson')) as f:
 with st.sidebar:
     # Logo dan BG
     st.write("Hello (〜￣▽￣)〜")
-    # st.image(os.path.join(asset_dir, 'data-science.png'))
-    st.image('asset\data-science.png')
+    st.image(os.path.join(asset_dir, 'data-science.png'))
+    # st.image('asset\data-science.png')
     st.write("""
              Saya Prayogi Dwi Wibisono mempersembahkan Dashboard analisis data dari penjualan properti di 
              kota New York.
