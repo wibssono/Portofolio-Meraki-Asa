@@ -1,4 +1,5 @@
 # -------------------------------------- Import Library ------------------------------
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
@@ -15,10 +16,12 @@ st.set_page_config(
 )
 
 # -------------------------------------- Read dataset and json file ------------------------------
-# Dataset
-df = pd.read_csv(r'data\nyc-rolling-sales_cleaned.csv')
-# GeoJson of New York City's Boundries
-with open(r'data\Borough Boundaries.geojson') as f:
+# Define the data directory
+data_dir = os.path.join(os.path.dirname(__file__), 'data')
+# Read the CSV file
+df = pd.read_csv(os.path.join(data_dir, 'nyc-rolling-sales_cleaned.csv'))
+# Read the GeoJSON file
+with open(os.path.join(data_dir, 'Borough Boundaries.geojson')) as f:
     nyc_geojson = json.load(f)
 
 # -------------------------------------- Side Bar --------------------------------------
